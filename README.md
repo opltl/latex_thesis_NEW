@@ -1,2 +1,2 @@
 # latex_thesis_new
-Šablona pro diplomovou práci dle nových pokynů děkana Fakulty strojní VŠB
+Šablona pro diplomovou práci dle nových pokynů děkana Fakulty strojní VŠB. Tato šablona obsahuje také ukázky.
