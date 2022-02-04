@@ -62,7 +62,7 @@ Vzhledem k oboustrannému tisku, pro který je tato šablona nastavena, je přiz
 \cfoot{}
 \KOMAoptions{headsepline=0.5pt}
 ```
-Příkaz `\rohead{Diplomová práce}` nám definuje, že na liché straně vpravo (right, odd) najdeme "Diplomová práce". Naopak výstupem příkazu `\lehead{\@author}` je Vaše jméno na liché straně vlevo (left, even).
+Příkaz `\rohead{Diplomová práce}` nám definuje, že na liché straně vpravo (right, odd) najdeme "Diplomová práce". Naopak výstupem příkazu `\lehead{\@author}` je Vaše jméno na sudé straně vlevo (left, even).
 ## Bibliografie
 
 ## Tipy
