@@ -1,7 +1,7 @@
 # Šablona pro diplomovou práci na FS VŠB
 Tato šablona vychází z nových pokynů (listopad 2021) děkana Fakulty strojní VŠB.
 
-__DŮLEŽITÉ!! Tato šablona je určena pro kompilátor XeLaTeX, jelikož využívá balíčku maker `fontspec` a výchozí kompilátor pdfTeX tedy nebude fungovat. Distribuce Miktex (Windows) a Mactex (MacOS), které doporučuje většina zdrojů obsahují latexmk-xelatex.__
+__DŮLEŽITÉ!! Tato šablona je určena pro kompilátor XeLaTeX, jelikož využívá balíčku maker `fontspec` a výchozí kompilátor pdfTeX tedy nebude fungovat. Distribuce Miktex (Windows) a Mactex (MacOS), které doporučuje většina zdrojů tento kompilátor obsahují.__
 
 ## Vstupní informace
 V souboru `main.tex` naleznete úvodní katipolu "Informace", ve které vyplníte nutné informace ohledně Vašeho jména a diplomové práce. Doplňujte vždy do složených závorek, např. `\title{}`. Mějte na paměti, že anglický název obsahuje slova s velkými písmeny na začátku jednotlivých slov, jako je vidět níže. Název práce je nutno vyplnit dvakrát, a to v `\title{}` a `\titlecolor{}`. Tyto informace se vyskytují nejen na úvodních stránkách, ale také například v bibliografickém záznamu nebo záhlaví (`\lehead{\@author}`)
@@ -21,7 +21,7 @@ V souboru `main.tex` naleznete úvodní katipolu "Informace", ve které vyplnít
 ```
 
 ## Struktura dokumentu
-V rámci přehlednosti a optimalizace rychlosti kompilace jsou v hlavním ROOT souboru `main.tex` nahrávány jednotlivé kapitoly.
+V rámci přehlednosti a optimalizace rychlosti kompilace jsou v hlavním ROOT souboru `main.tex` nahrávány jednotlivé kapitoly. Tyto kapitoly jsou již řazeny dle pokynů pro vypracování závěrečné práce. Od posledních pokynů se například liší neuváděním zadání závěrečné práce.
 
 ```tex
 \subfileinclude{kapitoly/biblio_zaznam}
@@ -44,9 +44,25 @@ Dále musí každý soubor, který vkládáme příkazem `\subfileinclude{}` obs
 ```
 
 ## Seznam značek a symbolů
+Pro seznam značek a symbolů jsou předdefinované dva příkazy:
+```tex
+\msym{k}{Coulombova konstanta}{\si{\newton\meter\squared\per\coulomb\squared}}
+...
+\msho{H}{vodík (\(^1\)H)}
+```
+Díky balíčku maker `siunitx` lze jednotky zapisovat slovně. Například jednotku kg/s zapíšeme standartně \(\mathrm{kg \cdot s^{-1}}\). S balíčkem `siunitx` lze stejnou jednotku zapsat `\si{\kilogram\per\second}`. Ovšem doporučuji pro celý dokument používat výhradně jeden způsob zapisování jednotek. Více naleznete v oficiální dokumentaci https://mirrors.nic.cz/tex-archive/macros/latex/contrib/siunitx/siunitx.pdf
 
 ## Záhlaví
-
+Vzhledem k oboustrannému tisku, pro který je tato šablona nastavena, je přizpůsobeno i záhlaví.
+```tex
+\pagestyle{scrheadings}
+\rohead{Diplomová práce}
+\lehead{\@author}
+\chead{}
+\cfoot{}
+\KOMAoptions{headsepline=0.5pt}
+```
+Příkaz `\rohead{Diplomová práce}` nám definuje, že na liché straně vpravo (right, odd) najdeme "Diplomová práce". Naopak výstupem příkazu `\lehead{\@author}` je Vaše jméno na liché straně vlevo (left, even).
 ## Bibliografie
 
 ## Tipy
