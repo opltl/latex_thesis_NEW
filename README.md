@@ -34,3 +34,19 @@ V rámci přehlednosti a optimalizace rychlosti kompilace jsou v hlavním ROOT s
 \subfileinclude{kapitoly/podekovani}
 ```
 Dílčí soubory najdete ve složce `/kapitoly` a díky odkazu na soubor `main.tex`, který se nachází na prvním řádku každého podsouboru `% !TEX root= ../main.tex` lze kompilovat přímo z daného souboru, kompilace je tedy rychlejší a práce je přehlednější.
+Dále musí každý soubor, který vkládáme příkazem `\subfileinclude{}` obsahovat:
+```tex
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+...
+\end{document}
+```
+
+## Seznam značek a symbolů
+
+## Záhlaví
+
+## Bibliografie
+
+## Tipy
