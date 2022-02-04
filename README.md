@@ -1,7 +1,7 @@
 # Šablona pro diplomovou práci na FS VŠB
 Tato šablona vychází z nových pokynů (listopad 2021) děkana Fakulty strojní VŠB.
 
-__DŮLEŽITÉ!!__ _Tato šablona je určena pro kompilátor XeLaTeX, jelikož využívá balíčku maker `\usepackage{fontspec}` a výchozí kompilátor pdfTeX tedy nebude fungovat. XeLaTeX obsahuje většina programů (ne-li všechny) specializované na tvorbu LaTeX dokumentů, jen nebývá defaultně vybrán._
+__DŮLEŽITÉ!! Tato šablona je určena pro kompilátor XeLaTeX, jelikož využívá balíčku maker `fontspec` a výchozí kompilátor pdfTeX tedy nebude fungovat. XeLaTeX obsahuje většina programů (ne-li všechny) specializované na tvorbu LaTeX dokumentů, jen nebývá defaultně vybrán.__
 
 ## Vstupní informace
 V souboru `main.tex` naleznete úvodní katipolu "Informace", ve které vyplníte nutné informace ohledně Vašeho jména a diplomové práce. Doplňujte vždy do složených závorek, např. `\title{}`. Mějte na paměti, že anglický název obsahuje slova s velkými písmeny na začátku jednotlivých slov, jako je vidět níže. Název práce je nutno vyplnit dvakrát, a to v `\title{}` a `\titlecolor{}`. Tyto informace se vyskytují nejen na úvodních stránkách, ale také například v bibliografickém záznamu nebo záhlaví (`\lehead{\@author}`)
@@ -19,3 +19,18 @@ V souboru `main.tex` naleznete úvodní katipolu "Informace", ve které vyplnít
 \city{Ostrava}
 \year=2022 % rok odevzdání diplomové práce
 ```
+
+## Struktura dokumentu
+V rámci přehlednosti a optimalizace rychlosti kompilace jsou v hlavním ROOT souboru `main.tex` nahrávány jednotlivé kapitoly.
+
+```tex
+\subfileinclude{kapitoly/biblio_zaznam}
+\subfileinclude{kapitoly/seznam_znacek}
+\subfileinclude{kapitoly/uvod}
+\subfileinclude{kapitoly/kapitola_01}
+\subfileinclude{kapitoly/kapitola_02}
+...
+\subfileinclude{kapitoly/zaver}
+\subfileinclude{kapitoly/podekovani}
+```
+
