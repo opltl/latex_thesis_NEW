@@ -50,7 +50,7 @@ Pro seznam značek a symbolů jsou předdefinované dva příkazy:
 ...
 \msho{H}{vodík (\(^1\)H)}
 ```
-Díky balíčku maker `siunitx` lze jednotky zapisovat slovně. Například jednotku kg/s zapíšeme standartně \(\mathrm{kg \cdot s^{-1}}\). S balíčkem `siunitx` lze stejnou jednotku zapsat `\si{\kilogram\per\second}`. Ovšem doporučuji pro celý dokument používat výhradně jeden způsob zapisování jednotek. Více naleznete v oficiální dokumentaci https://mirrors.nic.cz/tex-archive/macros/latex/contrib/siunitx/siunitx.pdf
+Díky balíčku maker `siunitx` lze jednotky zapisovat slovně. Například jednotku kg/s zapíšeme standartně `\(\mathrm{kg \cdot s^{-1}}\)`. S balíčkem `siunitx` lze stejnou jednotku zapsat `\si{\kilogram\per\second}`. Ovšem doporučuji pro celý dokument používat výhradně jeden způsob zapisování jednotek. Více naleznete v oficiální dokumentaci https://mirrors.nic.cz/tex-archive/macros/latex/contrib/siunitx/siunitx.pdf
 
 ## Záhlaví
 Vzhledem k oboustrannému tisku, pro který je tato šablona nastavena, je přizpůsobeno i záhlaví.
